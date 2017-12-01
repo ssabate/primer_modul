@@ -5,7 +5,7 @@ class TodoTask(models.Model):
     _name = 'todo.task'
     name = fields.Char('Descripció', required=True)
     is_done = fields.Boolean('Feta?')
-    active = fields.Boolean('Activa?', default=True)
+    active = fields.Boolean('Activa?')
 
     @api.one
     def do_toggle_done(self):
